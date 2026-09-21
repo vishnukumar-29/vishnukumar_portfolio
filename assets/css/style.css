@@ -301,3 +301,40 @@
   transform-origin: 70% 70%;
   animation: wave 1.5s ease-in-out infinite;
 }
+
+
+
+/* Back to Top Button */
+.back-to-top {
+    position: fixed;
+    right: 25px;
+    bottom: 30px;
+
+
+    border: none;
+    border-radius: 50%;
+
+    background: #2563eb;
+    color: #fff;
+
+    font-size: 2px;
+    cursor: pointer;
+
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px);
+
+    transition: all 0.3s ease;
+    z-index: 999;
+}
+
+.back-to-top.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.back-to-top:hover {
+    background: #1d4ed8;
+    transform: translateY(-5px);
+}

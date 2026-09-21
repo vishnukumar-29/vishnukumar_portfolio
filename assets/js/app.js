@@ -1,63 +1,63 @@
 // Navbar Toggle
-        const menuButton = document.getElementById("menuButton");
-        const mobileMenu = document.getElementById("mobileMenu");
-        const hamburger = document.getElementById("hamburger");
-        const cross = document.getElementById("cross");
-        const mobileLinks = document.querySelectorAll(".mobile-link");
+const menuButton = document.getElementById("menuButton");
+const mobileMenu = document.getElementById("mobileMenu");
+const hamburger = document.getElementById("hamburger");
+const cross = document.getElementById("cross");
+const mobileLinks = document.querySelectorAll(".mobile-link");
 
-        let menuOpen = false;
+let menuOpen = false;
 
-        menuButton.addEventListener("click", () => {
-            menuOpen = !menuOpen;
+menuButton.addEventListener("click", () => {
+    menuOpen = !menuOpen;
 
-            if (menuOpen) {
-                mobileMenu.classList.remove("invisible", "opacity-0");
-                mobileMenu.classList.add("visible", "opacity-100");
+    if (menuOpen) {
+        mobileMenu.classList.remove("invisible", "opacity-0");
+        mobileMenu.classList.add("visible", "opacity-100");
 
-                hamburger.classList.add("opacity-0", "rotate-90");
+        hamburger.classList.add("opacity-0", "rotate-90");
 
-                cross.classList.remove("opacity-0", "rotate-90");
-                cross.classList.add("opacity-100", "rotate-0");
-
-                mobileLinks.forEach((link) => {
-                    link.classList.remove("opacity-0", "translate-y-5");
-                    link.classList.add("opacity-100", "translate-y-0");
-                });
-
-                document.body.classList.add("overflow-hidden");
-            } else {
-                closeMenu();
-            }
-        });
-
-        function closeMenu() {
-            menuOpen = false;
-
-            mobileMenu.classList.add("invisible", "opacity-0");
-            mobileMenu.classList.remove("visible", "opacity-100");
-
-            hamburger.classList.remove("opacity-0", "rotate-90");
-
-            cross.classList.add("opacity-0", "rotate-90");
-            cross.classList.remove("opacity-100", "rotate-0");
-
-            mobileLinks.forEach((link) => {
-                link.classList.add("opacity-0", "translate-y-5");
-                link.classList.remove("opacity-100", "translate-y-0");
-            });
-
-            document.body.classList.remove("overflow-hidden");
-        }
+        cross.classList.remove("opacity-0", "rotate-90");
+        cross.classList.add("opacity-100", "rotate-0");
 
         mobileLinks.forEach((link) => {
-            link.addEventListener("click", closeMenu);
+            link.classList.remove("opacity-0", "translate-y-5");
+            link.classList.add("opacity-100", "translate-y-0");
         });
 
-        window.addEventListener("resize", () => {
-            if (window.innerWidth >= 768) {
-                closeMenu();
-            }
-        });
+        document.body.classList.add("overflow-hidden");
+    } else {
+        closeMenu();
+    }
+});
+
+function closeMenu() {
+    menuOpen = false;
+
+    mobileMenu.classList.add("invisible", "opacity-0");
+    mobileMenu.classList.remove("visible", "opacity-100");
+
+    hamburger.classList.remove("opacity-0", "rotate-90");
+
+    cross.classList.add("opacity-0", "rotate-90");
+    cross.classList.remove("opacity-100", "rotate-0");
+
+    mobileLinks.forEach((link) => {
+        link.classList.add("opacity-0", "translate-y-5");
+        link.classList.remove("opacity-100", "translate-y-0");
+    });
+
+    document.body.classList.remove("overflow-hidden");
+}
+
+mobileLinks.forEach((link) => {
+    link.addEventListener("click", closeMenu);
+});
+
+window.addEventListener("resize", () => {
+    if (window.innerWidth >= 768) {
+        closeMenu();
+    }
+});
 
 
 // Skills Swiper
@@ -187,3 +187,7 @@ const observer = new IntersectionObserver(
 );
 
 observer.observe(achievementSection);
+
+
+// Back to Top Button
+const backToTop = document.getElementById("backToTop"); window.addEventListener("scroll", () => { if (window.scrollY > 300) { backToTop.classList.add("show"); } else { backToTop.classList.remove("show"); } }); backToTop.addEventListener("click", () => { window.scrollTo({ top: 0, behavior: "smooth" }); });

@@ -31,7 +31,7 @@
                 <nav class="hidden md:flex items-center space-x-8">
                     <a href="#about"
                         class="primary-grey relative pb-1 after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-0 after:bg-white after:content-[''] after:transition-all after:duration-300 after:ease-in-out hover:after:w-full">
-                        About
+                        About Me
                     </a>
 
                     <a href="#experience"
@@ -79,7 +79,7 @@
         <div class="h-screen w-full flex flex-col justify-center items-center px-6">
             <nav class="flex flex-col items-center gap-7"> <a href="#about"
                     class="mobile-link primary-grey text-xl opacity-0 translate-y-5 transition-all duration-500 delay-100">
-                    About </a> <a href="#experience"
+                    About Me </a> <a href="#experience"
                     class="mobile-link primary-grey text-xl opacity-0 translate-y-5 transition-all duration-500 delay-150">
                     Experience </a> <a href="#work"
                     class="mobile-link primary-grey text-xl opacity-0 translate-y-5 transition-all duration-500 delay-200">
@@ -206,7 +206,8 @@
                     Skills
                 </p>
 
-                <h2 class="text-white text-lg sm:text-xl  md:text-2xl lg:text-3xl font-semibold text-center">
+                <h2
+                    class="text-white text-lg sm:text-xl max-sm:max-w-[290px] md:text-2xl lg:text-3xl font-semibold text-center">
                     The skills, tools and technologies I am really good at:
                 </h2>
             </div>
@@ -470,7 +471,7 @@
 
                     <!-- Stat 1 -->
                     <h3 class="relative text-3xl md:text-4xl lg:text-5xl font-bold text-light-white">
-                        <span class="counter" data-target="80">0</span><span class="text-primary">+</span>
+                        <span class="counter" data-target="95">0</span><span class="text-primary">+</span>
                     </h3>
 
                     <p class="relative mt-3 text-sm md:text-base text-light-grey">
@@ -533,7 +534,7 @@
 
                     <!-- Stat 4 -->
                     <h3 class="relative text-3xl md:text-4xl lg:text-5xl font-bold text-light-white">
-                        <span class="counter" data-target="10">0</span><span class="text-primary">+</span>
+                        <span class="counter" data-target="12">0</span><span class="text-primary">+</span>
                     </h3>
 
                     <p class="relative mt-3 text-sm md:text-base text-light-grey">
@@ -554,7 +555,7 @@
                     Experience
                 </p>
                 <h2 data-aos="zoom-in"
-                    class="text-white text-lg sm:text-xl mb-10 md:text-2xl lg:text-3xl font-semibold text-center">
+                    class="text-white text-lg sm:text-xl max-sm:max-w-[290px] mb-10 md:text-2xl lg:text-3xl font-semibold text-center">
                     Here is a
                     quick
                     summary of my most recent experiences:</h2>
@@ -728,7 +729,7 @@
 
 
                         <!-- Description -->
-                        <p class="text-light-grey text-sm md:text-base leading-relaxed mb-6 max-w-[600px]">
+                        <p class="text-light-grey text-sm lg:text-base leading-relaxed mb-6 max-w-[600px]">
                             A professional Amazon retail partner platform designed to help brands
                             grow their online presence and sales. The website highlights brand
                             partnerships, product distribution, Amazon retail strategies,
@@ -768,7 +769,7 @@
 
 
                         <!-- Description -->
-                        <p class="text-light-grey text-sm md:text-base leading-relaxed mb-6 max-w-[600px]">
+                        <p class="text-light-grey text-sm lg:text-base leading-relaxed mb-6 max-w-[600px]">
                             An AI-powered document management platform designed to help brokers
                             collect, analyse, rename, organise, and manage client documents
                             efficiently. The platform includes automated document processing,
@@ -825,7 +826,7 @@
 
 
                         <!-- Description -->
-                        <p class="text-light-grey text-sm md:text-base leading-relaxed mb-6 max-w-[600px]">
+                        <p class="text-light-grey text-sm lg:text-base leading-relaxed mb-6 max-w-[600px]">
                             Developed a responsive CS2 marketplace experience with categorized skin listings, product
                             pricing, search functionality, authentication flows, trading information, support sections,
                             testimonials, and a visually rich gaming-themed UI.
@@ -863,7 +864,7 @@
 
 
                         <!-- Description -->
-                        <p class="text-light-grey text-sm md:text-base leading-relaxed mb-6 max-w-[600px]">
+                        <p class="text-light-grey text-sm lg:text-base leading-relaxed mb-6 max-w-[600px]">
                             An AI-focused investment platform designed around AI ETFs and
                             automated investment concepts. The website presents AI-driven
                             research opportunities, arbitrage strategies, investment insights,
@@ -917,7 +918,7 @@
                         </h3>
 
                         <!-- Description -->
-                        <p class="text-light-grey text-sm md:text-base leading-relaxed mb-6 max-w-[600px]">
+                        <p class="text-light-grey text-sm lg:text-base leading-relaxed mb-6 max-w-[600px]">
                             A modern animal health and life science website focused on sustainable
                             solutions for improving animal health and performance. The platform
                             showcases products and solutions for cattle, calves, sheep and goats,
@@ -985,11 +986,19 @@
             </div>
         </div>
     </section>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="back-to-top w-[40px] h-[40px] md:w-[50px] md:h-[50px]" aria-label="Back to top">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+            stroke-linejoin="round">
+            <path d="m18 15-6-6-6 6"></path>
+        </svg>
+    </button>
     <!--======================= Swiper CDN ========================-->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <!--=================== Style Js Link ======================-->
     <script src="./assets/js/app.js"></script>
-      <!--======================== AOS CDN ==========================-->
+    <!--======================== AOS CDN ==========================-->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init({
@@ -1001,9 +1010,9 @@
         });
 
     </script>
-    
 
-  
+
+
 </body>
 
 </html>
